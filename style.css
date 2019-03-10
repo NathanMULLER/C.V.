@@ -3,13 +3,11 @@ body {
 }
 
 #page {
-  width: auto;
-  height: auto;
+  min-width: 320px;
 }
 
 #bas_page {
- width: auto;
- height: auto;
+ min-width: 320px;
 }
 
 nav {
