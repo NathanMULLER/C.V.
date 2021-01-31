@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div id="page">
+  <div id="page_info">
   <section class="top">
     <nav>
      <ul>
@@ -17,33 +17,35 @@
       --><li><a href="index.html">ACCUEIL</a></li><!--
       --><li><a href="info.html" class="active">INFORMATIONS</a>
       <ul class="sousmenu">
-        <li><a href="info.html#details">Etat Civil</a></li>
-        <li><a href="info.html#profil">Profil</a></li>
-        <li><a href="info.html#parcours">Parcours Scolaire</a></li>
-        <li><a href="info.html#experiences_professionnelles">D&eacute;couvertes Professionnelles</a></li>
-        <li><a href="info.html#competences">Comp&eacute;tences</a></li>
-        <li><a href="info.html#langues">Langues</a></li>
-        <li><a href="info.html#centres_d_interet">Centres d'int&eacute;r&ecirc;t</a></li>
+        <li id = "a"><a href="info.html#details">Etat Civil</a></li>
+        <li id = "a"><a href="info.html#profil">Profil</a></li>
+        <li id = "a"><a href="info.html#parcours">Parcours Scolaire</a></li>
+        <li id = "a"><a href="info.html#experiences_professionnelles">D&eacute;couvertes Professionnelles</a></li>
+        <li id = "a"><a href="info.html#competences">Comp&eacute;tences</a></li>
+        <li id = "a"><a href="info.html#langues">Langues</a></li>
+        <li id = "a"><a href="info.html#centres_d_interet">Centres d'int&eacute;r&ecirc;t</a></li>
       </ul>
          </li><!--
       --><li><a href="contact.html">CONTACT</a></li>
-      <span style="padding-left:70px"><a href="in_english.html">EN</a></span>
-      <span style="padding-left:0px; padding-right:50px"><a href="in_deutsch.html">DE</a></span>
-      <span>Site designed and coded by MULLER Nathan</span>
+      <span><a href="in_english.html">EN</a></span>
+      <span><a href="in_deutsch.html">DE</a></span>
+      <span style="padding-left:78%; text-align:center;">Site designed and coded by MULLER Nathan</span>
      </ul>
     </nav>
   </section>
+
   <section class="corps" id="info">
+    <div class="scrollTop" onclick="scrollToTop();"></div>
     <h1>MULLER Nathan</h1>
     <table id="details">
     <caption><h2>Etat Civil</h2></caption>
 <tr>
     <td>Adresse familiale</td>
-    <td>18 rue de l'Oberelsau,<br> 67200 STRASBOURG, FRANCE</td>
+    <td>18 rue de l'Oberelsau,<br>67200 STRASBOURG, FRANCE</td>
   </tr>
   <tr>
       <td>Adresse d'&eacute;tudes</td>
-      <td>Chemin du Signal 3,<br> 1112 ECHICHENS, SUISSE</td>
+      <td>Chemin du Signal 3,<br>1112 ECHICHENS, SUISSE</td>
     </tr>
 
   <tr>
@@ -259,9 +261,23 @@
   <section class="pied">
   </section>
 </div>
+<script type="text/javascript">
+  window.addEventListener('scroll', function() {
+    var scroll = document.querySelector('.scrollTop');
+    scroll.classList.toggle("active", window.scrollY > 600)
+  })
+
+  function scrollToTop(){
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+</script>
+
 </body>
 
-<footer id="bas_page">
+<footer id="bas_page_info">
   <table id="table_fin">
     <tr>
   <td id="message_bas">T&eacute;l&eacute;charger le C.V. en scannant le Q.R. code ci-contre :</td>

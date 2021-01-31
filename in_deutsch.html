@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div id="page">
+  <div id="page_info">
     <section class="top">
       <nav>
        <ul>
@@ -17,23 +17,24 @@
         --><li><a href="i_deutsch.html">HOMEPAGE</a></li><!--
         --><li><a href="in_deutsch.html" class="active">INFORMATIONEN</a>
               <ul class="sousmenu">
-                <li><a href="in_deutsch.html#details">Personenstand</a></li>
-                <li><a href="in_deutsch.html#profil">Profil</a></li>
-                <li><a href="in_deutsch.html#parcours">Schulischen Laufbahn</a></li>
-                <li><a href="in_deutsch.html#experiences_professionnelles">Beruflichen Erfahrungen</a></li>
-                <li><a href="in_deutsch.html#competences">Kompetenzen</a></li>
-                <li><a href="in_deutsch.html#langues">Sprachen</a></li>
-                <li><a href="in_deutsch.html#centres_d_interet">Interessen</a></li>
+                <li id = "a"><a href="in_deutsch.html#details">Personenstand</a></li>
+                <li id = "a"><a href="in_deutsch.html#profil">Profil</a></li>
+                <li id = "a"><a href="in_deutsch.html#parcours">Schulischen Laufbahn</a></li>
+                <li id = "a"><a href="in_deutsch.html#experiences_professionnelles">Beruflichen Erfahrungen</a></li>
+                <li id = "a"><a href="in_deutsch.html#competences">Kompetenzen</a></li>
+                <li id = "a"><a href="in_deutsch.html#langues">Sprachen</a></li>
+                <li id = "a"><a href="in_deutsch.html#centres_d_interet">Interessen</a></li>
               </ul>
            </li><!--
         --><li><a href="c_deutsch.html">KONTAKT</a></li>
-        <span style="padding-left:70px"><a href="in_english.html">EN</a></span>
-        <span style="padding-left:0px; padding-right:50px"><a href="info.html">FR</a></span>
-        <span>Site designed and coded by MULLER Nathan</span>
+        <span><a href="in_english.html">EN</a></span>
+        <span><a href="info.html">FR</a></span>
+        <span style="padding-left:78%; text-align:center;">Site designed and coded by MULLER Nathan</span>
        </ul>
       </nav>
     </section>
   <section class="corps" id="info">
+    <div class="scrollTop" onclick="scrollToTop();"></div>
     <h1>MULLER Nathan</h1>
     <table id="details">
     <caption><h2>Personenstand</h2></caption>
@@ -260,9 +261,23 @@
   <section class="pied">
   </section>
 </div>
+<script type="text/javascript">
+  window.addEventListener('scroll', function() {
+    var scroll = document.querySelector('.scrollTop');
+    scroll.classList.toggle("active", window.scrollY > 600)
+  })
+
+  function scrollToTop(){
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+</script>
+
 </body>
 
-<footer id="bas_page">
+<footer id="bas_page_info">
   <table id="table_fin">
     <tr>
   <td id="message_bas">Herunterladen den Lebenslauf durch einen Scan dieses Q.R.-Codes :</td>

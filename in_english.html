@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div id="page">
+  <div id="page_info">
   <section class="top">
     <nav>
      <ul>
@@ -17,23 +17,24 @@
       --><li><a href="i_english.html">HOME</a></li><!--
       --><li><a href="in_english.html" class="active">INFORMATIONS</a>
       <ul class="sousmenu">
-        <li><a href="in_english.html#details">Civil Status</a></li>
-        <li><a href="in_english.html#profil">Profile</a></li>
-        <li><a href="in_english.html#parcours">School Career</a></li>
-        <li><a href="in_english.html#experiences_professionnelles">Professional Experiences</a></li>
-        <li><a href="in_english.html#competences">Skills</a></li>
-        <li><a href="in_english.html#langues">Languages</a></li>
-        <li><a href="in_english.html#centres_d_interet">Hobbies</a></li>
+        <li id = "a"><a href="in_english.html#details">Civil Status</a></li>
+        <li id = "a"><a href="in_english.html#profil">Profile</a></li>
+        <li id = "a"><a href="in_english.html#parcours">School Career</a></li>
+        <li id = "a"><a href="in_english.html#experiences_professionnelles">Professional Experiences</a></li>
+        <li id = "a"><a href="in_english.html#competences">Skills</a></li>
+        <li id = "a"><a href="in_english.html#langues">Languages</a></li>
+        <li id = "a"><a href="in_english.html#centres_d_interet">Hobbies</a></li>
       </ul>
          </li><!--
       --><li><a href="c_english.html">CONTACT</a></li>
-      <span style="padding-left:70px"><a href="info.html">FR</a></span>
-      <span style="padding-left:0px; padding-right:50px"><a href="in_deutsch.html">DE</a></span>
-      <span>Site designed and coded by MULLER Nathan</span>
+      <span><a href="info.html">FR</a></span>
+      <span><a href="in_deutsch.html">DE</a></span>
+      <span style="padding-left:78%; text-align:center;">Site designed and coded by MULLER Nathan</span>
      </ul>
     </nav>
   </section>
   <section class="corps" id="info">
+    <div class="scrollTop" onclick="scrollToTop();"></div>
     <h1>MULLER Nathan</h1>
     <table id="details">
     <caption><h2>Civil Status</h2></caption>
@@ -260,9 +261,23 @@
   <section class="pied">
   </section>
 </div>
+<script type="text/javascript">
+  window.addEventListener('scroll', function() {
+    var scroll = document.querySelector('.scrollTop');
+    scroll.classList.toggle("active", window.scrollY > 600)
+  })
+
+  function scrollToTop(){
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+</script>
+
 </body>
 
-<footer id="bas_page">
+<footer id="bas_page_info">
   <table id="table_fin">
     <tr>
   <td id="message_bas">Download the C.V. by scanning this Q.R. code :</td>
